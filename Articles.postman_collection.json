@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "0782a06b-1189-4d89-b09a-e2773fa34608",
+		"name": "Articles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23465779"
+	},
+	"item": [
+		{
+			"name": "getArticles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category\":\"Sports\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/category/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"heading\":\"Heading 1\", \n  \"readTime\":20230405, \n  \"description\":\"Description 1\", \n  \"categories\":\"arts\", \n  \"thumbnailImage\":\"https://images.indianexpress.com/2023/04/Untitled-design-3-2.jpg?w=900\", \n  \"featuredImage\":\"https://images.indianexpress.com/2023/04/Untitled-design-2023-04-05T102051.592.jpg?w=316\", \n  \"verified\":true, \n  \"newest\":true, \n  \"trending\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category based Article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/articles/sports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"articles",
+						"sports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Article",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \n        \"heading\": \"Heading 1\",\n        \"readTime\": 20230405,\n        \"description\": \"Description 1\",\n        \"categories\": \"arts\",\n        \"thumbnailImage\": \"https://images.indianexpress.com/2023/04/Untitled-design-3-2.jpg?w=900\",\n        \"featuredImage\": \"https://images.indianexpress.com/2023/04/Untitled-design-2023-04-05T102051.592.jpg?w=316\",\n        \"verified\": true,\n        \"newest\": false,\n        \"trending\": true\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/articles/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"articles",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/articles/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"articles",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
